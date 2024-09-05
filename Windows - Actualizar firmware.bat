@@ -1,3 +1,3 @@
 @echo off
-python flash_firmware.py
+py flash_fw.py
 pause

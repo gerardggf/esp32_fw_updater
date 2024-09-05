@@ -1,0 +1,20 @@
+# entorno virtual
+.venv/
+esptoolenv
+
+# caché
+*.pyc
+__pycache__/
+
+# configuración de IDEs
+.vscode/
+.idea/
+
+# sistemas operativos
+.DS_Store
+Thumbs.db
+
+# configuración de paquetes
+*.egg-info/
+dist/
+build/

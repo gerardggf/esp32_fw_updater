@@ -1,3 +1,9 @@
+Crear venv con "esptool"
+
+Para generar el .exe: "pyinstaller --onefile --name "UpdateFwESP" flash_fw.py"
+
+---------------------------------------------------------------------------
+
 Para actualizar el firmware de la ESP32:
 
 1. Conecta la ESP32 a tu computadora.
@@ -9,3 +15,5 @@ Para actualizar el firmware de la ESP32:
    "python flash_fw.py"
 
 El script detectará automáticamente el puerto y actualizará el firmware.
+
+
