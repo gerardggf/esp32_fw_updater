@@ -18,3 +18,5 @@ Thumbs.db
 *.egg-info/
 dist/
 build/
+
+fw/firmware.bin

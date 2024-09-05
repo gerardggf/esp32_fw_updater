@@ -56,14 +56,15 @@ def flash_firmware():
         command = ['esptool', '--chip', 'esp32', '--port', port, 'write_flash', '-z', '0x1000', firmware_path
         ]
 
-        print(command)
 
         # Ejecutar el comando de flasheo
         subprocess.run(command, check=True)
 
         print("Firmware actualizado correctamente.")
+        print("Ya puedes cerrar la ventana")
     except Exception as e:
         print(f"Error al flashear el firmware: {e}")
+        input()
 
 
 
