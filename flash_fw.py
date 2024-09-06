@@ -4,7 +4,7 @@ import subprocess
 from tkinter import filedialog
 import serial.tools.list_ports
 import tkinter as tk
-
+import time
 
 def seleccionar_archivo():
     # Crea una ventana oculta para el diálogo de selección
@@ -56,10 +56,14 @@ def flash_firmware():
         # Comando para flashear el firmware
         command = ['python','-m','esptool', '--chip', 'esp32', '--port', port, 'write_flash', '-z', '0x1000', firmware_path
         ]
-
-
-        # Ejecutar el comando de flasheo
         subprocess.run(command, check=True)
+
+        # Esperamos un segundo por si las moscas
+        time.sleep(1)
+
+         # Comando para reiniciar la ESP32
+        command2 = ['python', '-m', 'esptool', '--chip', 'esp32', '--port', port, 'run']
+        subprocess.run(command2, check=True)
 
         print("Firmware actualizado correctamente.")
         print("Ya puedes cerrar la ventana")
