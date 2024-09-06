@@ -21,6 +21,7 @@ def seleccionar_archivo():
     return archivo_seleccionado
 
 
+# No lo utilizamos por ahora
 # def find_bin_file(directory):
 #     for file in os.listdir(directory):
 #         if file.endswith('.bin'):
