@@ -2,6 +2,9 @@ Crear venv con "esptool"
 
 Para generar el .exe: "pyinstaller --onefile --name "UpdateFwESP" flash_fw.py"
 
+"pip install pyserial"
+"pip install esptool"
+
 ---------------------------------------------------------------------------
 
 Para actualizar el firmware de la ESP32:

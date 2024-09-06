@@ -54,7 +54,7 @@ def flash_firmware():
             return
 
         # Comando para flashear el firmware
-        command = ['esptool', '--chip', 'esp32', '--port', port, 'write_flash', '-z', '0x1000', firmware_path
+        command = ['python','-m','esptool', '--chip', 'esp32', '--port', port, 'write_flash', '-z', '0x1000', firmware_path
         ]
 
 
